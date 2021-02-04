@@ -9,6 +9,11 @@ using namespace std;
   Feladat:
     Leggyakoribb elem keresése, számlálásba ágyazott megszámolással
     feltehető, hogy legalább 1 eleme van az adatoknak
+
+    Branch-ek:
+        - intro: c++ emlékeztető
+        - master: alapfeladat (megoldás: m1)
+        - f2: kiegészített feladatok (értékek 0 és m között) (megoldás: m2) 
 */
 
 //#define NORMAL_MODE
