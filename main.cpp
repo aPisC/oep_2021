@@ -29,6 +29,6 @@ int frequency(const vector<int> &x, int e){
     return 0;
 }
 
-int mostFrequented(const vector<int> &x){
+int mostFrequented(int m, const vector<int> &x){
     return 0;
 }

@@ -6,60 +6,69 @@ using namespace std;
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 
+
 TEST_CASE("0..m hossza 1", "[max]")
 {
+    int m = 0;
     vector<int> x = { 0, 0, 0 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(0==e);
 }
 
 TEST_CASE("0..m hossza 3", "[max]")
 {
+    int m = 2;
     vector<int> x = { 2, 0, 2, 1 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(2==e);
 }
 
 TEST_CASE("0..m eleje a max", "[max]")
 {
+    int m = 2;
     vector<int> x = { 0 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(0==e);
 }
 
 TEST_CASE("0..m vege a max", "[max]")
 {
+    int m = 2;
     vector<int> x = { 2 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(2==e);
 }
 
 TEST_CASE("egyetlen max", "[max]")
 {
+    int m = 2;
     vector<int> x = { 2, 0, 0 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(0==e);
 }
 
 TEST_CASE("tobb max", "[max]")
 {
+    int m = 1;
     vector<int> x = { 1, 0 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     bool l = 0==e || 1==e;
     CHECK(l);
 }
 
 TEST_CASE("elagazas bal", "[max]")
 {
+    int m = 2;
     vector<int> x = { 2, 0, 0 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(0==e);
 }
 
 TEST_CASE("elagazas jobb", "[max]")
 {
+    int m = 2;
     vector<int> x = { 0, 0, 2 };
-    int e = mostFrequented(x);
+    int e = mostFrequented(m, x);
     CHECK(0==e);
 }
 

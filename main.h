@@ -7,4 +7,4 @@ using namespace std;
 int frequency(const vector<int> &x, int e);
 
 //  maximum keresést végez az adatokon az előbbi függvényt használva
-int mostFrequented(const vector<int> &x);
+int mostFrequented( int m, const vector<int> &x);
