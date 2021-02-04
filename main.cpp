@@ -1,34 +1,43 @@
+#include <vector>
 #include <iostream>
 #include <fstream>
-#include <vector>
+#include <string> 
+
 #include "main.h"
 
 using namespace std;
 
 /*
-  Feladat:
-    Leggyakoribb elem keresése, számlálásba ágyazott megszámolással
-    feltehető, hogy legalább 1 eleme van az adatoknak
+  C++ alapok
 */
 
-//#define NORMAL_MODE
-#ifdef NORMAL_MODE
-    int main()
-    {
-        // file megnyitása, hiba esetén kilépés
+int main(int argc, char *argv[]){
+  cout << "HelloWorld!" << endl;
 
-        // adatok beolvasása vector-ba
+  // "using namespace std" nélkül
+  std::cout << "HelloWorld!" << endl; 
 
-        // leggyakoribb elem megkerestetése
-    }
-#else
-    #include "test.hpp"
-#endif
+  // header file-ban deklaráltuk, hogy a hw függvény milyen tulajdonságokkal bír
+  // de még nem került definiálásra a működése, előzetes deklaráláés nélkül fordítási hibát okoz
+  hw();
 
-int frequency(const vector<int> &x, int e){
-    return 0;
-}
+  // változó, referencia, mutató
+  int a = 10;
+  int b = a; // b értéke egyenlő a értékével
+  int &c = a;  // c változó ugyan arra a területre "dolgozik" mint a
+  int *d = &a; // d változó hivatkozik a-ra
 
-int mostFrequented(const vector<int> &x){
-    return 0;
+  a += 5; 
+  c += 5; 
+  d += 5;  
+
+  // a: 20 b: 10, c: 20, d: ???
+  cout << "a: " << a << " b: " << b << ", c: " << c << ", d: " << *d <<endl;
+
+} 
+
+
+// itt definiáljuk a hw függvény működését
+void hw() {
+  std::cout << "HelloWorld!" << endl;
 }
