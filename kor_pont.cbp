@@ -32,15 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="catch.hpp" />
 		<Unit filename="circle.h" />
 		<Unit filename="input.txt" />
+		<Unit filename="input0.txt" />
+		<Unit filename="input1.txt" />
+		<Unit filename="input2.txt" />
+		<Unit filename="input3.txt" />
 		<Unit filename="kor_pont.cbp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="point.h" />
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
