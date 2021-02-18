@@ -9,6 +9,7 @@ using namespace std;
 bool search(const Circle &cir, const vector<Point> &t, unsigned int &ind);
 void FillInFromFile(const string &str, Circle &c, vector<Point> &t);
 
+#define NORMAL_MODE
 #ifdef NORMAL_MODE
 
 int main()
@@ -19,7 +20,7 @@ int main()
 
     unsigned int ind;
     if (search(cir, t, ind))
-        cout << "A (" << t[ind]._x << "," << t[ind]._y << ") koordinataju pont a korbe esik\n";
+        cout << "A " << t[ind] << " koordinataju pont a " << cir << " korbe esik\n";
     else
         cout << "Egyik pont sincs a korben\n";
 
@@ -124,13 +125,14 @@ void FillInFromFile(const string &str, Circle &cir, vector<Point> &t)
     if (f.fail())
         cout << "Hibas fajl nev!\n";
 
-    double a, b, c;
-    f >> a >> b >> c;
-    Circle x(Point(a, b), c);
+    double c;
+    Point p;
+    f >> p >> c;
+    Circle x(p, c);
     cir = x;
 
-    while (f >> a >> b)
+    while (f >> p)
     {
-        t.push_back(Point(a, b));
+        t.push_back(p);
     }
 }

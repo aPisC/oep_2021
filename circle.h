@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 /*
   Középpont (Point), sugár
   Konstruktor
@@ -19,4 +19,13 @@ public:
   {
     return _c.distance(p) <= _r;
   }
+
+private:
+  friend std::ostream &operator<<(std::ostream &os, Circle &c);
 };
+
+inline std::ostream &operator<<(std::ostream &os, Circle &c)
+{
+  os << "[" << c._c << "," << c._r << "]";
+  return os;
+}
