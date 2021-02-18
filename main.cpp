@@ -6,7 +6,7 @@
 
 using namespace std;
 
-bool search(const Circle& cir, const vector<Point> &t, unsigned int &ind);
+bool search(const Circle &cir, const vector<Point> &t, unsigned int &ind);
 void FillInFromFile(const string &str, Circle &c, vector<Point> &t);
 
 #ifdef NORMAL_MODE
@@ -18,9 +18,10 @@ int main()
     FillInFromFile("input.txt", cir, t);
 
     unsigned int ind;
-    if(search(cir, t, ind))
+    if (search(cir, t, ind))
         cout << "A (" << t[ind]._x << "," << t[ind]._y << ") koordinataju pont a korbe esik\n";
-    else cout << "Egyik pont sincs a korben\n";
+    else
+        cout << "Egyik pont sincs a korben\n";
 
     return 0;
 }
@@ -33,7 +34,8 @@ int main()
 
 TEST_CASE("empty sequence", "[search]")
 {
-    ifstream f("input0.txt"); REQUIRE(!f.fail());
+    ifstream f("input0.txt");
+    REQUIRE(!f.fail());
     Circle cir;
     vector<Point> t;
     FillInFromFile("input0.txt", cir, t);
@@ -45,7 +47,8 @@ TEST_CASE("empty sequence", "[search]")
 
 TEST_CASE("one inner point", "[search]")
 {
-    ifstream f("input1.txt"); REQUIRE(!f.fail());
+    ifstream f("input1.txt");
+    REQUIRE(!f.fail());
     Circle cir;
     vector<Point> t;
     FillInFromFile("input1.txt", cir, t);
@@ -53,12 +56,13 @@ TEST_CASE("one inner point", "[search]")
     unsigned int ind;
     bool l = search(cir, t, ind);
     CHECK(l);
-    CHECK(ind==0);
+    CHECK(ind == 0);
 }
 
 TEST_CASE("one outer point", "[search]")
 {
-    ifstream f("input2.txt"); REQUIRE(!f.fail());
+    ifstream f("input2.txt");
+    REQUIRE(!f.fail());
     Circle cir;
     vector<Point> t;
     FillInFromFile("input2.txt", cir, t);
@@ -70,7 +74,8 @@ TEST_CASE("one outer point", "[search]")
 
 TEST_CASE("last inner point", "[search]")
 {
-    ifstream f("input3.txt"); REQUIRE(!f.fail());
+    ifstream f("input3.txt");
+    REQUIRE(!f.fail());
     Circle cir;
     vector<Point> t;
     FillInFromFile("input3.txt", cir, t);
@@ -78,7 +83,7 @@ TEST_CASE("last inner point", "[search]")
     unsigned int ind;
     bool l = search(cir, t, ind);
     CHECK(l);
-    CHECK(ind==2);
+    CHECK(ind == 2);
 }
 
 // Test cases of class Point
@@ -97,15 +102,15 @@ TEST_CASE("contains", "[circle]")
 {
     Circle c(Point(0.0, 0.0), 0.0);
 
-    CHECK(c.contains(Point(0.0,0.0)));
+    CHECK(c.contains(Point(0.0, 0.0)));
 }
 
 #endif
 
-bool search(const Circle& cir, const vector<Point> &t, unsigned int &ind)
+bool search(const Circle &cir, const vector<Point> &t, unsigned int &ind)
 {
     bool l = false;
-    for(unsigned int i=0; !l && i<t.size(); ++i)
+    for (unsigned int i = 0; !l && i < t.size(); ++i)
     {
         l = cir.contains(t[i]);
         ind = i;
@@ -113,17 +118,19 @@ bool search(const Circle& cir, const vector<Point> &t, unsigned int &ind)
     return l;
 }
 
-void FillInFromFile(const string &str, Circle &cir, vector<Point> &t )
+void FillInFromFile(const string &str, Circle &cir, vector<Point> &t)
 {
     ifstream f(str.c_str());
-    if(f.fail()) cout << "Hibas fajl nev!\n";
+    if (f.fail())
+        cout << "Hibas fajl nev!\n";
 
     double a, b, c;
     f >> a >> b >> c;
-    Circle x(Point(a,b), c);
+    Circle x(Point(a, b), c);
     cir = x;
 
-    while(f >> a >> b){
-        t.push_back(Point(a,b));
+    while (f >> a >> b)
+    {
+        t.push_back(Point(a, b));
     }
 }
