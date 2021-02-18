@@ -3,4 +3,5 @@
 /*
   Koordináták: x, y
   konstruktor
+  distance(Point)
 */
