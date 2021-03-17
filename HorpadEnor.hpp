@@ -33,3 +33,15 @@ public:
     bool end() { return _f.fail(); }
     Item current() { return _item; }
 };
+
+void HorpadEnor::next()
+{
+    _item.e = _item.a;
+    _item.a = _item.k;
+    _f >> _item.k;
+}
+
+void HorpadEnor::first()
+{
+    _f >> _item.e >> _item.a >> _item.k;
+}
