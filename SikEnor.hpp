@@ -19,12 +19,16 @@ private:
         NORM,
         ABNORM
     };
+
+    // Beolvasas kezeles
     Status _st;
     int _e;
-    Sik _item;
     ifstream _x;
-    bool _end;
     void read();
+
+    // Enor mukodes
+    Sik _item;
+    bool _end;
 
 public:
     SikEnor(string filename)
