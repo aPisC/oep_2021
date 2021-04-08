@@ -1,4 +1,4 @@
-# Doctor Who
+# Doctor Who (Minta ZH)
 
 A kitűzött feladatra készítsen objektum elvű megoldást C++ nyelven az alábbi szempontok alapján:
 
