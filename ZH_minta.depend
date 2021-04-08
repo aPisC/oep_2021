@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1617867752 source:c:\users\bendeguz\downloads\lab_08\main.cpp
+	"SeasonEnor.hpp"
+	"ActorEnor.hpp"
+	"iostream"
+
+1617867575 c:\users\bendeguz\downloads\lab_08\seasonenor.hpp
+	<string>
+	<fstream>
+	<sstream>
+
+1617867584 c:\users\bendeguz\downloads\lab_08\actorenor.hpp
+	<string>
+	"SeasonEnor.hpp"
+
