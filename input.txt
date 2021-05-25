@@ -1,6 +1,6 @@
 1996 PaulMcGann BeastBelow 48 VictoryOfTheDaleks 52
 2005 ChristopherEccleston EleventhHour 65 BeastBelow 45 VictoryOfTheDaleks 45 TimeOfAngels 40
-2006 DavidTennant EleventhHour 65 BeastBelow 43 VictoryOfTheDaleks 45
 2007 DavidTennant EleventhHour 65 BeastBelow 53 VictoryOfTheDaleks 45 TimeOfAngels 39
+2006 DavidTennant EleventhHour 65 BeastBelow 43 VictoryOfTheDaleks 45
 2010 MattSmith EleventhHour 65 BeastBelow 45 VictoryOfTheDaleks 45 TimeOfAngels 40
 2011 MattSmith EleventhHour 42 BeastBelow 45 VictoryOfTheDaleks 45 TimeOfAngels 65
